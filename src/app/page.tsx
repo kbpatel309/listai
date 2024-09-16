@@ -5,6 +5,7 @@ import { NewToDoForm } from "./_components/new-todo-form";
 import { ToDoList } from "./_components/to-do-list";
 import { SignInButton, UserButton } from "@clerk/nextjs";
 import { GenerateTodosForm } from "./_components/generate-todos-form";
+import { ThemeToggle } from "./_components/theme-toggle";
 
 export default function Home() {
 
@@ -13,8 +14,11 @@ export default function Home() {
       
       <Authenticated>
         <div className="flex items-center justify-between">
-          <h1 className="text-xl font-bold">To-Do List</h1>
-          <UserButton />
+          <h1 className="text-xl font-bold">ListAI</h1>
+          <div className="flex items-center space-x-2">
+            <ThemeToggle />
+            <UserButton />
+          </div>
         </div>
         
         <ToDoList />
